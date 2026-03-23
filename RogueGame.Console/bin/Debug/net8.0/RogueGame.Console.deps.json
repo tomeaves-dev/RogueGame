@@ -59,15 +59,16 @@
           }
         }
       },
-      "GoRogue/2.6.4": {
+      "GoRogue/3.0.0-alpha09": {
         "dependencies": {
           "OptimizedPriorityQueue": "4.2.0",
-          "Troschuetz.Random": "4.4.0"
+          "TheSadRogue.Primitives": "1.1.1",
+          "Troschuetz.Random": "5.0.1"
         },
         "runtime": {
-          "lib/netstandard2.0/GoRogue.dll": {
-            "assemblyVersion": "2.6.4.0",
-            "fileVersion": "2.6.4.0"
+          "lib/net5.0/GoRogue.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
           }
         }
       },
@@ -96,11 +97,19 @@
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
-      "Troschuetz.Random/4.4.0": {
+      "TheSadRogue.Primitives/1.1.1": {
+        "runtime": {
+          "lib/net5.0/TheSadRogue.Primitives.dll": {
+            "assemblyVersion": "1.1.1.0",
+            "fileVersion": "1.1.1.0"
+          }
+        }
+      },
+      "Troschuetz.Random/5.0.1": {
         "runtime": {
           "lib/netstandard2.1/Troschuetz.Random.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.4.0.0"
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.1.0"
           }
         }
       },
@@ -115,10 +124,13 @@
       "RogueGame.Simulation/1.0.0": {
         "dependencies": {
           "Arch": "2.1.0",
-          "GoRogue": "2.6.4"
+          "GoRogue": "3.0.0-alpha09"
         },
         "runtime": {
-          "RogueGame.Simulation.dll": {}
+          "RogueGame.Simulation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -157,12 +169,12 @@
       "path": "communitytoolkit.highperformance/8.2.2",
       "hashPath": "communitytoolkit.highperformance.8.2.2.nupkg.sha512"
     },
-    "GoRogue/2.6.4": {
+    "GoRogue/3.0.0-alpha09": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nyClW1RMfwjr+tKMU+QXDDAsXqXEvfZW+whSB2KrvHIAeVKlwN+hoYAmmnpGvXLAmV4X32RrE+IcOvkQkslW9Q==",
-      "path": "gorogue/2.6.4",
-      "hashPath": "gorogue.2.6.4.nupkg.sha512"
+      "sha512": "sha512-HX80hHeKf18jUerBMRzumawpY05MQ6izVIuPJBsykNjriviDMTpJpbIh6vb42U09tzeiXuRqLR7Z4AycWYi/Pw==",
+      "path": "gorogue/3.0.0-alpha09",
+      "hashPath": "gorogue.3.0.0-alpha09.nupkg.sha512"
     },
     "Microsoft.Extensions.ObjectPool/7.0.0": {
       "type": "package",
@@ -192,12 +204,19 @@
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
-    "Troschuetz.Random/4.4.0": {
+    "TheSadRogue.Primitives/1.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SIESLPNQUIo8FkfeFaaJZcE0/r+Vg6nicacYDvZB+rTOl4VTKK5lEqCW2SvkLLaUV11jnCtna73LQ7iXAHumGA==",
-      "path": "troschuetz.random/4.4.0",
-      "hashPath": "troschuetz.random.4.4.0.nupkg.sha512"
+      "sha512": "sha512-dvgxcbQv3K54wlBCCnJV4RL0Nj/R2Sb7v3y7NoS4AVfvXvQ+FUTOaEgWyQQ4GXBsxVrBByAgW1W1Y2TO9tL01g==",
+      "path": "thesadrogue.primitives/1.1.1",
+      "hashPath": "thesadrogue.primitives.1.1.1.nupkg.sha512"
+    },
+    "Troschuetz.Random/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o23z0g0qxk0DzuUu7PovULOsVHphjVXxVyrhedFTUH9ikzD4IJswz/ZSxzhNk652d0aMFocCgwIFu24cp+SM6w==",
+      "path": "troschuetz.random/5.0.1",
+      "hashPath": "troschuetz.random.5.0.1.nupkg.sha512"
     },
     "ZeroAllocJobScheduler/1.1.2": {
       "type": "package",

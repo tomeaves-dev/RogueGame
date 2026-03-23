@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/tomeaves/Development/Games/RogueGame/RogueGame.Console/RogueGame.Console.csproj": {}
+    "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Console/RogueGame.Console.csproj": {}
   },
   "projects": {
-    "/home/tomeaves/Development/Games/RogueGame/RogueGame.Console/RogueGame.Console.csproj": {
+    "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Console/RogueGame.Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Console/RogueGame.Console.csproj",
+        "projectUniqueName": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Console/RogueGame.Console.csproj",
         "projectName": "RogueGame.Console",
-        "projectPath": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Console/RogueGame.Console.csproj",
-        "packagesPath": "/home/tomeaves/.nuget/packages/",
-        "outputPath": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Console/obj/",
+        "projectPath": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Console/RogueGame.Console.csproj",
+        "packagesPath": "/Users/tommyeaves/.nuget/packages/",
+        "outputPath": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Console/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/tomeaves/.nuget/NuGet/NuGet.Config"
+          "/Users/tommyeaves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj": {
-                "projectPath": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj"
+              "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj": {
+                "projectPath": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj"
               }
             }
           }
@@ -36,7 +36,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -58,26 +64,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj": {
+    "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj",
+        "projectUniqueName": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj",
         "projectName": "RogueGame.Simulation",
-        "projectPath": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj",
-        "packagesPath": "/home/tomeaves/.nuget/packages/",
-        "outputPath": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/",
+        "projectPath": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj",
+        "packagesPath": "/Users/tommyeaves/.nuget/packages/",
+        "outputPath": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/tomeaves/.nuget/NuGet/NuGet.Config"
+          "/Users/tommyeaves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -95,7 +115,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -107,7 +133,7 @@
             },
             "GoRogue": {
               "target": "Package",
-              "version": "[2.6.4, )"
+              "version": "[3.0.0-alpha09, )"
             }
           },
           "imports": [
@@ -121,12 +147,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

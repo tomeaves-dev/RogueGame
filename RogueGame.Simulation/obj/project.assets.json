@@ -66,19 +66,20 @@
           }
         }
       },
-      "GoRogue/2.6.4": {
+      "GoRogue/3.0.0-alpha09": {
         "type": "package",
         "dependencies": {
           "OptimizedPriorityQueue": "4.2.0",
-          "Troschuetz.Random": "4.4.0"
+          "TheSadRogue.Primitives": "1.1.1",
+          "Troschuetz.Random": "5.0.1"
         },
         "compile": {
-          "lib/netstandard2.0/GoRogue.dll": {
+          "lib/net5.0/GoRogue.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/GoRogue.dll": {
+          "lib/net5.0/GoRogue.dll": {
             "related": ".xml"
           }
         }
@@ -125,7 +126,20 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Troschuetz.Random/4.4.0": {
+      "TheSadRogue.Primitives/1.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/TheSadRogue.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/TheSadRogue.Primitives.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Troschuetz.Random/5.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/Troschuetz.Random.dll": {
@@ -235,17 +249,21 @@
         "lib/netstandard2.1/CommunityToolkit.HighPerformance.xml"
       ]
     },
-    "GoRogue/2.6.4": {
-      "sha512": "nyClW1RMfwjr+tKMU+QXDDAsXqXEvfZW+whSB2KrvHIAeVKlwN+hoYAmmnpGvXLAmV4X32RrE+IcOvkQkslW9Q==",
+    "GoRogue/3.0.0-alpha09": {
+      "sha512": "HX80hHeKf18jUerBMRzumawpY05MQ6izVIuPJBsykNjriviDMTpJpbIh6vb42U09tzeiXuRqLR7Z4AycWYi/Pw==",
       "type": "package",
-      "path": "gorogue/2.6.4",
+      "path": "gorogue/3.0.0-alpha09",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "gorogue.2.6.4.nupkg.sha512",
+        "gorogue.3.0.0-alpha09.nupkg.sha512",
         "gorogue.nuspec",
-        "lib/netstandard2.0/GoRogue.dll",
-        "lib/netstandard2.0/GoRogue.xml",
+        "lib/net5.0/GoRogue.dll",
+        "lib/net5.0/GoRogue.xml",
+        "lib/netcoreapp3.1/GoRogue.dll",
+        "lib/netcoreapp3.1/GoRogue.xml",
+        "lib/netstandard2.1/GoRogue.dll",
+        "lib/netstandard2.1/GoRogue.xml",
         "readme.txt"
       ]
     },
@@ -322,10 +340,27 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Troschuetz.Random/4.4.0": {
-      "sha512": "SIESLPNQUIo8FkfeFaaJZcE0/r+Vg6nicacYDvZB+rTOl4VTKK5lEqCW2SvkLLaUV11jnCtna73LQ7iXAHumGA==",
+    "TheSadRogue.Primitives/1.1.1": {
+      "sha512": "dvgxcbQv3K54wlBCCnJV4RL0Nj/R2Sb7v3y7NoS4AVfvXvQ+FUTOaEgWyQQ4GXBsxVrBByAgW1W1Y2TO9tL01g==",
       "type": "package",
-      "path": "troschuetz.random/4.4.0",
+      "path": "thesadrogue.primitives/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/TheSadRogue.Primitives.dll",
+        "lib/net5.0/TheSadRogue.Primitives.xml",
+        "lib/netcoreapp3.1/TheSadRogue.Primitives.dll",
+        "lib/netcoreapp3.1/TheSadRogue.Primitives.xml",
+        "lib/netstandard2.1/TheSadRogue.Primitives.dll",
+        "lib/netstandard2.1/TheSadRogue.Primitives.xml",
+        "thesadrogue.primitives.1.1.1.nupkg.sha512",
+        "thesadrogue.primitives.nuspec"
+      ]
+    },
+    "Troschuetz.Random/5.0.1": {
+      "sha512": "o23z0g0qxk0DzuUu7PovULOsVHphjVXxVyrhedFTUH9ikzD4IJswz/ZSxzhNk652d0aMFocCgwIFu24cp+SM6w==",
+      "type": "package",
+      "path": "troschuetz.random/5.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -355,7 +390,7 @@
         "lib/netstandard2.1/Troschuetz.Random.dll",
         "lib/netstandard2.1/Troschuetz.Random.pdb",
         "lib/netstandard2.1/Troschuetz.Random.xml",
-        "troschuetz.random.4.4.0.nupkg.sha512",
+        "troschuetz.random.5.0.1.nupkg.sha512",
         "troschuetz.random.nuspec"
       ]
     },
@@ -376,23 +411,23 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Arch >= 2.1.0",
-      "GoRogue >= 2.6.4"
+      "GoRogue >= 3.0.0-alpha09"
     ]
   },
   "packageFolders": {
-    "/home/tomeaves/.nuget/packages/": {}
+    "/Users/tommyeaves/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj",
+      "projectUniqueName": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj",
       "projectName": "RogueGame.Simulation",
-      "projectPath": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj",
-      "packagesPath": "/home/tomeaves/.nuget/packages/",
-      "outputPath": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/",
+      "projectPath": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj",
+      "packagesPath": "/Users/tommyeaves/.nuget/packages/",
+      "outputPath": "/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/tomeaves/.nuget/NuGet/NuGet.Config"
+        "/Users/tommyeaves/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -410,7 +445,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -422,7 +463,7 @@
           },
           "GoRogue": {
             "target": "Package",
-            "version": "[2.6.4, )"
+            "version": "[3.0.0-alpha09, )"
           }
         },
         "imports": [
@@ -436,12 +477,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.19, 8.0.19]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.19, 8.0.19]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

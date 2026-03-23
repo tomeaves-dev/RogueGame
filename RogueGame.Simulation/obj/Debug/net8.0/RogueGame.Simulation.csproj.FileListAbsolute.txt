@@ -10,3 +10,16 @@
 /home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/refint/RogueGame.Simulation.dll
 /home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.pdb
 /home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/ref/RogueGame.Simulation.dll
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/bin/Debug/net8.0/RogueGame.Simulation.deps.json
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/bin/Debug/net8.0/RogueGame.Simulation.dll
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/bin/Debug/net8.0/RogueGame.Simulation.pdb
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.csproj.AssemblyReference.cache
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.AssemblyInfoInputs.cache
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.AssemblyInfo.cs
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.csproj.CoreCompileInputs.cache
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.sourcelink.json
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.dll
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/refint/RogueGame.Simulation.dll
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.pdb
+/Users/tommyeaves/Development/tomeaves-dev/games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/ref/RogueGame.Simulation.dll
