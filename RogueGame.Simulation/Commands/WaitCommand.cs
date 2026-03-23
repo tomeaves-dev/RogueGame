@@ -1,0 +1,1 @@
+namespace RogueGame.Simulation;

@@ -1,0 +1,12 @@
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/bin/Debug/net8.0/RogueGame.Simulation.deps.json
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/bin/Debug/net8.0/RogueGame.Simulation.dll
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/bin/Debug/net8.0/RogueGame.Simulation.pdb
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.csproj.AssemblyReference.cache
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.GeneratedMSBuildEditorConfig.editorconfig
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.AssemblyInfoInputs.cache
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.AssemblyInfo.cs
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.csproj.CoreCompileInputs.cache
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.dll
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/refint/RogueGame.Simulation.dll
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/RogueGame.Simulation.pdb
+/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/obj/Debug/net8.0/ref/RogueGame.Simulation.dll

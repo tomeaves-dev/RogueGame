@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "YKLORt97CDF3G3tdxJWigSQxMxbs2JS6M8ZUhQNGvwOhuzGy8i+mIoCAsXMdIAhm5ro01AO1lpOtJ5JSKWJ6pA==",
+  "success": true,
+  "projectFilePath": "/home/tomeaves/Development/Games/RogueGame/RogueGame.Simulation/RogueGame.Simulation.csproj",
+  "expectedPackageFiles": [
+    "/home/tomeaves/.nuget/packages/arch/2.1.0/arch.2.1.0.nupkg.sha512",
+    "/home/tomeaves/.nuget/packages/arch.lowlevel/1.1.5/arch.lowlevel.1.1.5.nupkg.sha512",
+    "/home/tomeaves/.nuget/packages/collections.pooled/2.0.0-preview.27/collections.pooled.2.0.0-preview.27.nupkg.sha512",
+    "/home/tomeaves/.nuget/packages/communitytoolkit.highperformance/8.2.2/communitytoolkit.highperformance.8.2.2.nupkg.sha512",
+    "/home/tomeaves/.nuget/packages/gorogue/2.6.4/gorogue.2.6.4.nupkg.sha512",
+    "/home/tomeaves/.nuget/packages/microsoft.extensions.objectpool/7.0.0/microsoft.extensions.objectpool.7.0.0.nupkg.sha512",
+    "/home/tomeaves/.nuget/packages/optimizedpriorityqueue/4.2.0/optimizedpriorityqueue.4.2.0.nupkg.sha512",
+    "/home/tomeaves/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/tomeaves/.nuget/packages/troschuetz.random/4.4.0/troschuetz.random.4.4.0.nupkg.sha512",
+    "/home/tomeaves/.nuget/packages/zeroallocjobscheduler/1.1.2/zeroallocjobscheduler.1.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
