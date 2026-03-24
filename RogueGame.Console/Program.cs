@@ -1,26 +1,36 @@
 using Spectre.Console;
 using RogueGame.Simulation.Components;
 using RogueGame.Simulation.Core;
+using RogueGame.Console.Rendering;
 
-var world = new GameWorld(80, 40);
+var world = new GameWorld(120, 80);
+var viewport = new Viewport(60, 40);
 
 AnsiConsole.Clear();
 Console.CursorVisible = false;
 
-void DrawGlyph(int x, int y, char glyph, (byte R, byte G, byte B) color)
+void DrawGlyph(int screenX, int screenY, char glyph, (byte R, byte G, byte B) color)
 {
-    Console.SetCursorPosition(x, y);
+    Console.SetCursorPosition(screenX, screenY);
     AnsiConsole.Markup($"[#{color.R:X2}{color.G:X2}{color.B:X2}]{glyph}[/]");
 }
 
 void Render()
 {
     var map = world.Map;
+    var playerPos = world.GetComponent<Position>(world.Player);
 
-    for (int y = 0; y < map.Height; y++)
-    for (int x = 0; x < map.Width; x++)
+    // Re-centre viewport on player each frame
+    viewport.Center(playerPos.X, playerPos.Y, map.Width, map.Height);
+
+    // Draw only tiles within the viewport
+    for (int y = 0; y < viewport.Height; y++)
+    for (int x = 0; x < viewport.Width; x++)
     {
-        var tile = map.GetTile(x, y);
+        int mapX = viewport.X + x;
+        int mapY = viewport.Y + y;
+
+        var tile = map.GetTile(mapX, mapY);
 
         if (!tile.IsExplored)
             DrawGlyph(x, y, ' ', (0, 0, 0));
@@ -30,16 +40,32 @@ void Render()
             DrawGlyph(x, y, tile.Glyph, tile.Foreground);
     }
 
-    var playerPos = world.GetComponent<Position>(world.Player);
+    // Draw player at screen position
+    var (screenX, screenY) = viewport.ToScreen(playerPos.X, playerPos.Y);
     var playerGlyph = world.GetComponent<Glyph>(world.Player);
-    DrawGlyph(playerPos.X, playerPos.Y, playerGlyph.Char, playerGlyph.Foreground);
+    DrawGlyph(screenX, screenY, playerGlyph.Char, playerGlyph.Foreground);
 
-    Console.SetCursorPosition(0, map.Height + 1);
+    // HUD below viewport
+    Console.SetCursorPosition(0, viewport.Height + 1);
     AnsiConsole.MarkupLine($"HP: [red]{world.GetComponent<Health>(world.Player).Current}[/]  " +
                            $"Position: [grey]{playerPos.X}, {playerPos.Y}[/]");
 
-    var status = world.IsAutoExploring ? "[yellow]Auto-exploring...[/]" : "[grey]O: auto-explore  Q: quit[/]";
+    var status = world.IsAutoExploring
+        ? "[yellow]Auto-exploring...[/]"
+        : "[grey]O: auto-explore  Q: quit[/]";
     AnsiConsole.MarkupLine(status);
+}
+
+void ErasePlayer()
+{
+    var playerPos = world.GetComponent<Position>(world.Player);
+    var (screenX, screenY) = viewport.ToScreen(playerPos.X, playerPos.Y);
+    var tile = world.Map.GetTile(playerPos.X, playerPos.Y);
+
+    if (!tile.IsVisible)
+        DrawGlyph(screenX, screenY, tile.Glyph, (40, 40, 40));
+    else
+        DrawGlyph(screenX, screenY, tile.Glyph, tile.Foreground);
 }
 
 while (true)
@@ -48,7 +74,6 @@ while (true)
 
     if (world.IsAutoExploring)
     {
-        // Cancel if any key is waiting
         if (Console.KeyAvailable)
         {
             Console.ReadKey(intercept: true);
@@ -56,16 +81,14 @@ while (true)
             continue;
         }
 
-        Thread.Sleep(50); // Small delay so movement is visible
+        Thread.Sleep(50);
+        ErasePlayer();
         world.StepAutoExplore();
         continue;
     }
 
     var key = Console.ReadKey(intercept: true).Key;
-
-    var oldPos = world.GetComponent<Position>(world.Player);
-    var oldTile = world.Map.GetTile(oldPos.X, oldPos.Y);
-    DrawGlyph(oldPos.X, oldPos.Y, oldTile.Glyph, oldTile.Foreground);
+    ErasePlayer();
 
     switch (key)
     {
