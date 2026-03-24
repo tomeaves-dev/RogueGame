@@ -21,7 +21,22 @@ void Render()
     for (int x = 0; x < map.Width; x++)
     {
         var tile = map.GetTile(x, y);
-        DrawGlyph(x, y, tile.Glyph, tile.Foreground);
+
+        if (!tile.IsExplored)
+        {
+            // Never seen — render black
+            DrawGlyph(x, y, ' ', (0, 0, 0));
+        }
+        else if (!tile.IsVisible)
+        {
+            // Seen but not currently visible — render dimmed
+            DrawGlyph(x, y, tile.Glyph, (40, 40, 40));
+        }
+        else
+        {
+            // Currently visible — render at full brightness
+            DrawGlyph(x, y, tile.Glyph, tile.Foreground);
+        }
     }
 
     var playerPos = world.GetComponent<Position>(world.Player);
@@ -46,10 +61,14 @@ while (true)
 
     switch (key)
     {
-        case ConsoleKey.UpArrow:    world.TryMove(world.Player, 0, -1); break;
-        case ConsoleKey.DownArrow:  world.TryMove(world.Player, 0,  1); break;
-        case ConsoleKey.LeftArrow:  world.TryMove(world.Player, -1, 0); break;
-        case ConsoleKey.RightArrow: world.TryMove(world.Player,  1, 0); break;
+        case ConsoleKey.K: world.TryMove(world.Player, 0, -1); break;
+        case ConsoleKey.J: world.TryMove(world.Player, 0,  1); break;
+        case ConsoleKey.H: world.TryMove(world.Player, -1, 0); break;
+        case ConsoleKey.L: world.TryMove(world.Player,  1, 0); break;
+        case ConsoleKey.Y: world.TryMove(world.Player, -1, -1); break;
+        case ConsoleKey.U: world.TryMove(world.Player, 1,  -1); break;
+        case ConsoleKey.B: world.TryMove(world.Player, -1, 1); break;
+        case ConsoleKey.N: world.TryMove(world.Player,  1, 1); break;
         case ConsoleKey.Q:
             Console.CursorVisible = true;
             return;
