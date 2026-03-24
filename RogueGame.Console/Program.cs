@@ -23,20 +23,11 @@ void Render()
         var tile = map.GetTile(x, y);
 
         if (!tile.IsExplored)
-        {
-            // Never seen — render black
             DrawGlyph(x, y, ' ', (0, 0, 0));
-        }
         else if (!tile.IsVisible)
-        {
-            // Seen but not currently visible — render dimmed
             DrawGlyph(x, y, tile.Glyph, (40, 40, 40));
-        }
         else
-        {
-            // Currently visible — render at full brightness
             DrawGlyph(x, y, tile.Glyph, tile.Foreground);
-        }
     }
 
     var playerPos = world.GetComponent<Position>(world.Player);
@@ -46,12 +37,29 @@ void Render()
     Console.SetCursorPosition(0, map.Height + 1);
     AnsiConsole.MarkupLine($"HP: [red]{world.GetComponent<Health>(world.Player).Current}[/]  " +
                            $"Position: [grey]{playerPos.X}, {playerPos.Y}[/]");
-    AnsiConsole.MarkupLine("[grey]Arrow keys to move, Q to quit[/]");
+
+    var status = world.IsAutoExploring ? "[yellow]Auto-exploring...[/]" : "[grey]O: auto-explore  Q: quit[/]";
+    AnsiConsole.MarkupLine(status);
 }
 
 while (true)
 {
     Render();
+
+    if (world.IsAutoExploring)
+    {
+        // Cancel if any key is waiting
+        if (Console.KeyAvailable)
+        {
+            Console.ReadKey(intercept: true);
+            world.CancelAutoExplore();
+            continue;
+        }
+
+        Thread.Sleep(50); // Small delay so movement is visible
+        world.StepAutoExplore();
+        continue;
+    }
 
     var key = Console.ReadKey(intercept: true).Key;
 
@@ -66,9 +74,10 @@ while (true)
         case ConsoleKey.H: world.TryMove(world.Player, -1, 0); break;
         case ConsoleKey.L: world.TryMove(world.Player,  1, 0); break;
         case ConsoleKey.Y: world.TryMove(world.Player, -1, -1); break;
-        case ConsoleKey.U: world.TryMove(world.Player, 1,  -1); break;
-        case ConsoleKey.B: world.TryMove(world.Player, -1, 1); break;
-        case ConsoleKey.N: world.TryMove(world.Player,  1, 1); break;
+        case ConsoleKey.U: world.TryMove(world.Player,  1, -1); break;
+        case ConsoleKey.B: world.TryMove(world.Player, -1,  1); break;
+        case ConsoleKey.N: world.TryMove(world.Player,  1,  1); break;
+        case ConsoleKey.O: world.StartAutoExplore(); break;
         case ConsoleKey.Q:
             Console.CursorVisible = true;
             return;
